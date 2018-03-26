@@ -1,0 +1,27 @@
+{
+  "name": "expressive-cli",
+  "version": "0.0.1",
+  "description": "A tool to scaffolding new project using Expressive boilerplate.",
+  "bin": {
+    "expressive": "./index.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travlrcom/expressive-cli.git"
+  },
+  "author": "Krisan Alfa Timur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/travlrcom/expressive-cli/issues"
+  },
+  "homepage": "https://github.com/travlrcom/expressive-cli#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "commander": "^2.15.1",
+    "rimraf": "^2.6.2",
+    "shelljs": "^0.8.1"
+  }
+}
