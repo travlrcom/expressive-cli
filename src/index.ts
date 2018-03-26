@@ -9,7 +9,7 @@ const ghDownload = require('github-download')
 import * as request from 'request-promise-native'
 
 program
-  .version('1.1.0')
+  .version('1.1.1')
   .command('new [project]')
   .description('Create new project under given directory.')
   .action(async (project) => {
