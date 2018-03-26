@@ -6,7 +6,7 @@ let project = ''
 program
   .version('0.1.0')
   .arguments('[dir]')
-  .action(dir => project = dir)
+  .action(function (dir) { project = dir })
 
 program.parse(process.argv)
 
