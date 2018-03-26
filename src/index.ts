@@ -9,7 +9,7 @@ const ghDownload = require('github-download')
 import * as request from 'request-promise-native'
 
 program
-  .version('1.1.0')
+  .version('1.1.1')
   .command('new [project]')
   .description('Create new project under given directory.')
   .action(async (project) => {
@@ -52,7 +52,7 @@ program
         console.log('')
         console.log(chalk.bold('Next thing you need to do:'))
         console.log('  - cd ' + chalk.green(project))
-        console.log('  - yarn install ' + chalk.gray('# or you can use npm, but using yarn is recommended'))
+        console.log('  - yarn install ' + chalk.gray('# or npm install, but using yarn is recommended'))
         console.log('  - yarn dev     ' + chalk.gray('# or npm run dev'))
       })
   })

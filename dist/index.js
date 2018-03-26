@@ -17,7 +17,7 @@ const program = require("commander");
 const ghDownload = require('github-download');
 const request = require("request-promise-native");
 program
-    .version('1.1.0')
+    .version('1.1.1')
     .command('new [project]')
     .description('Create new project under given directory.')
     .action((project) => __awaiter(this, void 0, void 0, function* () {
@@ -51,7 +51,7 @@ program
         console.log('');
         console.log(chalk_1.default.bold('Next thing you need to do:'));
         console.log('  - cd ' + chalk_1.default.green(project));
-        console.log('  - yarn install ' + chalk_1.default.gray('# or you can use npm, but using yarn is recommended'));
+        console.log('  - yarn install ' + chalk_1.default.gray('# or npm install, but using yarn is recommended'));
         console.log('  - yarn dev     ' + chalk_1.default.gray('# or npm run dev'));
     });
 }));
