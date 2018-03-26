@@ -52,7 +52,7 @@ program
         console.log('')
         console.log(chalk.bold('Next thing you need to do:'))
         console.log('  - cd ' + chalk.green(project))
-        console.log('  - yarn install ' + chalk.gray('# or you can use npm, but using yarn is recommended'))
+        console.log('  - yarn install ' + chalk.gray('# or npm install, but using yarn is recommended'))
         console.log('  - yarn dev     ' + chalk.gray('# or npm run dev'))
       })
   })
