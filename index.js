@@ -6,7 +6,7 @@ let project = ''
 program
   .version('0.1.0')
   .arguments('[dir]')
-  .action(dir => project = dir)
+  .action(function (dir) { project = dir })
 
 program.parse(process.argv)
 
@@ -19,13 +19,13 @@ const path = require('path')
 const destination = path.join(process.cwd(), project)
 
 if (require('fs').existsSync(destination)) {
-  console.error(chalk.red(`Project destination: ${destination} already exists`))
+  console.error(chalk.red('Project destination: ' + destination + ' already exists'))
   process.exit(1)
 }
 
-console.log(chalk.green(`Cloning to ${destination} ...`))
-require('shelljs').exec(`git clone https://github.com/travlrcom/expressive ${project}`, { silent: true }, () => {
+console.log(chalk.green('Cloning to ' + destination + ' ...'))
+require('shelljs').exec('git clone https://github.com/travlrcom/expressive ' + project, { silent: true }, () => {
   require('rimraf')(path.join(destination, '.git'), {}, () => {
-    console.log(chalk.blue(`Successfully cloned to ${destination}`))
+    console.log(chalk.blue('Successfully cloned to ' + destination))
   })
 })
