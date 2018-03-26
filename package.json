@@ -1,9 +1,9 @@
 {
   "name": "expressive-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A tool to scaffolding new project using Expressive boilerplate.",
   "bin": {
-    "expressive": "./index.js"
+    "expressive": "./dist/index.js"
   },
   "scripts": {
     "lint": "tslint --project .",
