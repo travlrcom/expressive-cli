@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const chalk_1 = require("chalk");
@@ -6,7 +7,7 @@ let project = '';
 program
     .version('0.1.0')
     .arguments('[dir]')
-    .action(dir => project = dir);
+    .action(function (dir) { project = dir; });
 program.parse(process.argv);
 if (!project) {
     console.error(chalk_1.default.red('[project] argument is missing'));
