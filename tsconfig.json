@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "outDir": "./dist",
+    "sourceMap": false,
+    "newLine": "LF",
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "module": "commonjs",
+    "moduleResolution": "node"
+  },
+  "include": [ "./src/**/*" ],
+  "exclude": [ "node_modules" ]
+}

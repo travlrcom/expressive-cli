@@ -1,5 +1,5 @@
-const chalk = require('chalk')
-const program = require('commander')
+import chalk from 'chalk'
+import * as program from 'commander'
 
 let project = ''
 
@@ -15,17 +15,22 @@ if (!project) {
   process.exit(1)
 }
 
-const path = require('path')
+import * as fs from 'fs'
+import * as path from 'path'
+
 const destination = path.join(process.cwd(), project)
 
-if (require('fs').existsSync(destination)) {
+if (fs.existsSync(destination)) {
   console.error(chalk.red(`Project destination: ${destination} already exists`))
   process.exit(1)
 }
 
+import * as shell from 'shelljs'
+import * as rimraf from 'rimraf'
+
 console.log(chalk.green(`Cloning to ${destination} ...`))
-require('shelljs').exec(`git clone https://github.com/travlrcom/expressive ${project}`, { silent: true }, () => {
-  require('rimraf')(path.join(destination, '.git'), {}, () => {
+shell.exec(`git clone https://github.com/travlrcom/expressive ${project}`, { silent: true }, () => {
+  rimraf(path.join(destination, '.git'), {}, () => {
     console.log(chalk.blue(`Successfully cloned to ${destination}`))
   })
 })
