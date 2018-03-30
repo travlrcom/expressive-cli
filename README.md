@@ -1,6 +1,6 @@
 <p align="center">
-<img src="https://cdn.rawgit.com/travlrcom/expressive/develop/public/logo.png" data-canonical-src="https://cdn.rawgit.com/travlrcom/expressive/develop/public/logo.png" width="200" />
-<h1 align="center">Expressive</h1>
+<img src="https://cdn.rawgit.com/travlrcom/expressive/master/client/img/logo.png" data-canonical-src="https://cdn.rawgit.com/travlrcom/expressive/master/client/img/logo.png" width="200" alt="Expressive" />
+<h1 align="center">Expressive CLI</h1>
 </p>
 
 Use this tools to scaffold your project using [Expressive Boilerplate](https://github.com/travlrcom/expressive).

@@ -17,7 +17,7 @@ const program = require("commander");
 const ghDownload = require('github-download');
 const request = require("request-promise-native");
 program
-    .version('1.1.1')
+    .version('1.1.2')
     .command('new [project]')
     .description('Create new project under given directory.')
     .action((project) => __awaiter(this, void 0, void 0, function* () {
