@@ -1,6 +1,6 @@
 {
   "name": "expressive-cli",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A tool to scaffolding new project using Expressive boilerplate.",
   "bin": {
     "expressive": "./dist/index.js"
