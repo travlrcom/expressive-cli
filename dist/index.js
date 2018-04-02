@@ -17,7 +17,7 @@ const program = require("commander");
 const ghDownload = require('github-download');
 const request = require("request-promise-native");
 program
-    .version('1.1.2')
+    .version('1.1.3')
     .command('new [project]')
     .description('Create new project under given directory.')
     .action((project) => __awaiter(this, void 0, void 0, function* () {
@@ -40,7 +40,7 @@ program
         }
     });
     const result = JSON.parse(response);
-    const latest = (result.length) ? result.pop() : { name: 'master' };
+    const latest = (result.length) ? result.shift() : { name: 'master' };
     spinner.info(`Using Expressive v${latest.name}`);
     ghDownload({ user: 'travlrcom', repo: 'expressive', ref: latest.name }, destination)
         .on('end', () => {
