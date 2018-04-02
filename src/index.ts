@@ -9,7 +9,7 @@ const ghDownload = require('github-download')
 import * as request from 'request-promise-native'
 
 program
-  .version('1.1.2')
+  .version('1.1.3')
   .command('new [project]')
   .description('Create new project under given directory.')
   .action(async project => {
@@ -36,7 +36,7 @@ program
     })
 
     const result = JSON.parse(response)
-    const latest = (result.length) ? result.pop() : { name: 'master' }
+    const latest = (result.length) ? result.shift() : { name: 'master' }
 
     spinner.info(`Using Expressive v${latest.name}`)
 
